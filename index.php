@@ -12,6 +12,8 @@
   <title>CV Développeur / Intégrateur Web - Loïc Gallay </title>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <!-- CSS -->
@@ -77,7 +79,7 @@
           </div>
           <div class="row">
             <div class="col s12 m4 l4 push-m8 push-l8">
-              <img src="img/avatar.jpg" alt="avatar" class="responsive-img circle center-block">
+              <img src="img/avatar.jpg" alt="avatar" class="responsive-img circle center-block" id="avatar">
             </div>
             <div class="col s12 m8 l8 pull-m4 pull-l4">
               <p>
@@ -103,7 +105,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col s12 m4 l4">
+          <div class="col s10 offset-s1 m4 l4">
             <div class="flip-container">
 	            <div class="flipper">
 		            <div class="front">
@@ -113,6 +115,10 @@
                       <h3 class="center-align">
                         Front-end
                       </h3>
+                      <span class="fa-stack fa-5x center-block">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-television fa-stack-1x"></i>
+                      </span>
                     </div>
                   </div>
 		            </div>
@@ -153,16 +159,26 @@
 	            </div>
             </div>
           </div>
-          <div class="col s12 m4 l4">
+          <div class="col s10 offset-s1 m4 l4">
             <div class="flip-container">
               <div class="flipper">
                 <div class="front">
                   <!-- front content -->
                   <div class="card medium">
                     <div class="card-content">
-                      <h3 class="center-align">
-                        Back-end
-                      </h3>
+                      <div class="row">
+                        <div class="col s12 m12 l12">
+                          <h3 class="center-align">
+                            Back-end
+                          </h3>
+                        </div>
+                        <div class="col s12 m12 l12 ">
+                          <span class="fa-stack fa-5x center-block">
+                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                            <i class="fa fa-server fa-stack-1x"></i>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -213,6 +229,10 @@
                       <h3 class="center-align">
                         Divers
                       </h3>
+                      <span class="fa-stack fa-5x center-block">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-gears fa-stack-1x"></i>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -224,21 +244,28 @@
                       <ul>
                         <li>
                           <p>
-
+                            Maîtrise de l'éditeur de texte Atom
                           </p>
-
                         </li>
                         <li>
                           <p>
-
+                            Framework CSS: bootstrap, materialize
                           </p>
-
                         </li>
                         <li>
                           <p>
-
+                            Framework PHP: silex, W
                           </p>
-
+                        </li>
+                        <li>
+                          <p>
+                            Langues: Anglais (courant + professionnel), Allemand (lu)
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            Certifié 0 Opquast <i class="material-icons">sentiment_very_satisfied</i>
+                          </p>
                         </li>
                       </ul>
                     </div>
@@ -253,7 +280,83 @@
       <div class="divider"></div>
 
       <section id="work" class="scrollspy">
-        Réalisations
+        <div class="row">
+          <div class="col s12 center-align">
+            <h2>
+              Réalisations
+            </h2>
+            <p>
+              Une selection de travaux effectués jusqu'ici.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/banane.png" alt="site Banana-shop">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Banana-Shop<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Banana-shop<i class="material-icons right">close</i></span>
+                <p>Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.</p>
+                <p><a href="#">Lien</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/facebook.png" alt="site facebook">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Facebook<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Facebook<i class="material-icons right">close</i></span>
+                <p>Reproduction de l'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.</p>
+                <p><a href="#">Lien</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/scotland.png" alt="site Visit Scotland">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Visit Scotland<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Visit Scotland<i class="material-icons right">close</i></span>
+                <p>Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.</p>
+                <p><a href="#">Lien</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/cats.png" alt="site OhMyCats">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">OhMyCats<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">OhMyCats<i class="material-icons right">close</i></span>
+                <p>
+                  Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.
+                </p>
+                <p><a href="#">Lien</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <div class="divider"></div>
