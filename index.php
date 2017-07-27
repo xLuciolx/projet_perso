@@ -78,10 +78,10 @@
             </p>
           </div>
           <div class="row">
-            <div class="col s12 m4 l4 push-m8 push-l8">
+            <div class="col s12 m4 push-m8 l4 push-l8">
               <img src="img/avatar.jpg" alt="avatar" class="responsive-img circle center-block" id="avatar">
             </div>
-            <div class="col s12 m8 l8 pull-m4 pull-l4">
+            <div class="col s12 m8 pull-m4 l8 pull-l4">
               <p>
                 Développeur / Intégrateur web curieux, autonome et rigoureux, j'aime les applications simples, rapides et efficaces.
                 Un sens de l'écoute et du service, une expertise technique en constante progression grâce à une formation continue. Motivé par le besoin de toujours mieux faire et appuyé par des bases acquises au cours de mon parcours, je prend plaisir à relever de nouveaux challenges.
@@ -355,6 +355,98 @@
               </div>
             </div>
           </div>
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/cars.png" alt="site Old Schools Cars">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Old Schools Cars<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Old Schools Cars<i class="material-icons right">close</i></span>
+                <p>
+                  Page de sélection d'un véhicule, utilisaton de flexbox et de javascript.
+                </p>
+                <p><a href="#">Lien</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col s10 offset-s1 m4 l4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="img/biovillefranche.png" alt="site OhMyCats">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Bio Villefranche<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Bio Villefranche<i class="material-icons right">close</i></span>
+                <p>
+                  Site de vente d'une épicerie bio. Génération dynamique du contenu grâce à PHP et SQL, vérification de formulaires et partie administration du site.
+                </p>
+                <p>
+                  <p><a href="#" class="left">Lien</a></p>
+                <a class="btn-floating fab waves-effect waves-light orange modal-trigger right hide-on-small-only" href="#modal"><i class="material-icons">add</i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- modal -->
+          <div id="modal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+
+              <div class="slider">
+                <ul class="slides">
+                  <li>
+                    <img src="img/biovillefranche.png" alt="accueil">
+                    <!-- <div class="caption left-align">
+                      <h4>Accueil</h3>
+                    </div>
+                  </li> -->
+                  <li>
+                    <img src="img/inscription.png">
+                    <!-- <div class="caption left-align">
+                      <h3>Left Aligned Caption</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div> -->
+                  </li>
+                  <li>
+                    <img src="img/produits.png"> <!-- random image -->
+                    <!-- <div class="caption right-align">
+                      <h3>Right Aligned Caption</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div> -->
+                  </li>
+                  <li>
+                    <img src="img/panier.png">
+                    <!-- <div class="caption center-align">
+                      <h3>This is our big Tagline!</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div> -->
+                  </li>
+                  <li>
+                    <img src="img/admin.png">
+                    <!-- <div class="caption center-align">
+                      <h3>This is our big Tagline!</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div> -->
+                  </li>
+                  <li>
+                    <img src="img/stat.png">
+                    <!-- <div class="caption center-align">
+                      <h3>This is our big Tagline!</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div> -->
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-bluegrey-lighten-1 btn-flat ">Fermer</a>
+            </div>
+           </div>
         </div>
 
       </section>
