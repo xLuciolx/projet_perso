@@ -78,7 +78,7 @@
             </p>
           </div>
           <div class="row">
-            <div class="col s12 m4 push-m8 l4 push-l8">
+            <div class="col s6 offset-s3 m4 l4 push-m8 push-l8">
               <img src="img/avatar.jpg" alt="avatar" class="responsive-img circle center-block" id="avatar">
             </div>
             <div class="col s12 m8 pull-m4 l8 pull-l4">
