@@ -11,12 +11,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CV Développeur / Intégrateur Web - Loïc Gallay </title>
   <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <!-- CSS -->
+  <link rel="stylesheet" href="css/timeline.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,9 +34,8 @@
       </div>
     </header>
 
-    <nav class="hide-on-small-only col m12 l12 blue-grey lihghten-1">
-        <!-- <ul class="table-of-contents"> -->
-        <ul>
+    <nav class="hide-on-small-only col m12 l12 blue-grey lighten-1">
+        <ul class="table-of-contents">
           <li>
             <a href="#about" class="active">A propos</a>
           </li>
@@ -55,16 +55,16 @@
     </nav>
 
     <div class="fixed-action-btn horizontal click-to-toggle show-on-small hide-on-med-and-up" >
-      <a class="btn-floating btn-large blue-grey lighten-1 waves-effect waves-light"><i class="material-icons">menu</i></a>
+      <a class="btn-floating btn-large blue-grey lighten-1 waves-effect waves-light"><?= setIcon('menu',1); ?></a>
       <ul>
-        <li><a href="#about" class="btn-floating red"><i class="material-icons">person_outline</i></a></li>
-        <li><a href="#skill" class="btn-floating yellow darken-1"><i class="material-icons">school</i></a></li>
-        <li><a href="#work" class="btn-floating deep-orange"><i class="material-icons">build</i></a></li>
-        <li><a href="#resume" class="btn-floating green"><i class="material-icons">insert_drive_file</i></a></li>
-        <li><a href="#contact" class="btn-floating blue"><i class="material-icons">mail_outline</i></a></li>
+        <li><a href="#about" class="btn-floating deep-orange lighten-1"><?= setIcon('person_outline',1); ?></a></li>
+        <li><a href="#skill" class="btn-floating blue-grey lighten-1"><?= setIcon('school',1); ?></a></li>
+        <li><a href="#work" class="btn-floating deep-orange lighten-1"><?= setIcon('build',1); ?></a></li>
+        <li><a href="#resume" class="btn-floating blue-grey lighten-1"><?= setIcon('insert_drive_file',1); ?></a></li>
+        <li><a href="#contact" class="btn-floating deep-orange lighten-1"><?= setIcon('mail_outline',1); ?></a></li>
       </ul>
     </div>
-    <div class="divider hide-om-med-and-up show-on-small"></div>
+    <div class="divider hide-on-med-and-up show-on-small"></div>
     <main>
 
       <section id="about" class="scrollspy">
@@ -73,7 +73,7 @@
             <h2>
               A propos
             </h2>
-            <p>
+            <p class="grey-text darken-1">
               Quelques mots pour me décrire
             </p>
           </div>
@@ -99,7 +99,7 @@
             <h2>
               Compétences
             </h2>
-            <p>
+            <p class="grey-text darken-1">
               En formation continue.
             </p>
           </div>
@@ -132,15 +132,15 @@
                           <p>
                             HTML
                           </p>
-                          <?php starIcon('star', 5); ?>
+                          <?php setIcon('star', 5); ?>
                         </li>
                         <li>
                           <p>
                             CSS
                           </p>
                           <?php
-                            starIcon('star', 4);
-                            starIcon('star_half', 1);
+                            setIcon('star', 4);
+                            setIcon('star_half', 1);
                            ?>
                         </li>
                         <li>
@@ -148,8 +148,8 @@
                             Javascript
                           </p>
                           <?php
-                            starIcon('star', 4);
-                            starIcon('star_border', 1);
+                            setIcon('star', 4);
+                            setIcon('star_border', 1);
                            ?>
                         </li>
                       </ul>
@@ -192,15 +192,15 @@
                           <p>
                             PHP
                           </p>
-                          <?php starIcon('star', 4); ?>
-                          <?php starIcon('star_border', 1); ?>
+                          <?php setIcon('star', 4); ?>
+                          <?php setIcon('star_border', 1); ?>
                         </li>
                         <li>
                           <p>
                             PHP orienté objet
                           </p>
                           <?php
-                            starIcon('star_border', 5);
+                            setIcon('star_border', 5);
                            ?>
                         </li>
                         <li>
@@ -208,8 +208,8 @@
                             SQL
                           </p>
                           <?php
-                            starIcon('star', 4);
-                            starIcon('star_border', 1);
+                            setIcon('star', 4);
+                            setIcon('star_border', 1);
                            ?>
                         </li>
                       </ul>
@@ -285,14 +285,14 @@
             <h2>
               Réalisations
             </h2>
-            <p>
+            <p class="grey-text darken-1">
               Une selection de travaux effectués jusqu'ici.
             </p>
           </div>
         </div>
         <div class="row">
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/banane.png" alt="site Banana-shop">
               </div>
@@ -307,7 +307,7 @@
             </div>
           </div>
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/facebook.png" alt="site facebook">
               </div>
@@ -322,7 +322,7 @@
             </div>
           </div>
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/scotland.png" alt="site Visit Scotland">
               </div>
@@ -339,7 +339,7 @@
         </div>
         <div class="row">
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/cats.png" alt="site OhMyCats">
               </div>
@@ -356,7 +356,7 @@
             </div>
           </div>
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/cars.png" alt="site Old Schools Cars">
               </div>
@@ -373,7 +373,7 @@
             </div>
           </div>
           <div class="col s10 offset-s1 m4 l4">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="img/biovillefranche.png" alt="site OhMyCats">
               </div>
@@ -387,7 +387,7 @@
                 </p>
                 <p>
                   <p><a href="#" class="left">Lien</a></p>
-                <a class="btn-floating fab waves-effect waves-light orange modal-trigger right hide-on-small-only" href="#modal"><i class="material-icons">add</i></a>
+                <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1 modal-trigger right hide-on-small-only" href="#modal"><?= setIcon('add',1); ?></a>
                 </p>
               </div>
             </div>
@@ -454,7 +454,47 @@
       <div class="divider"></div>
 
       <section id="resume" class="scrollspy">
-        CV express
+        <div class="row">
+          <div class="col s12 center-align">
+            <h2>
+              CV
+            </h2>
+            <p class="grey-text darken-1">
+              Mon parcours professionnel et ma formation
+            </p>
+          </div>
+        </div>
+        <div class="row">
+            <?php
+              include 'include/timeline.php';
+             ?>
+          <div class="col s8 offset-s2 m4 l4">
+            <div class="card">
+            <div class="card-content">
+              <span class="card-title center-align">Diplomes</span>
+              <ul>
+                <li>
+                  <p>
+                    Licence de Biologie des Organismes
+                  </p>
+                  <p>
+                    Université Claude Bernard Lyon 1
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <abbr title="Diplome d'Etudes Universitaires Générales">DEUG</abbr> Sciences de la Vie
+                  </p>
+                  <p>
+                    Université Claude Bernard Lyon 1
+                  </p>
+                </li>
+              </ul>
+                <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a><span> Télecharger la version pdf</span>
+            </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="divider"></div>
@@ -478,6 +518,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Javascript Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <script src="js/script.js" charset="utf-8"></script>
+  <script src="js/components.js" charset="utf-8"></script>
 </body>
 </html>
