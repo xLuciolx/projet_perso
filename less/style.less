@@ -1,12 +1,16 @@
 // out: ../css/style.css, compress: true
+
 @bluegrey : #78909c;
-// .dev{
-//   box-sizing: border-box;
-//   border: 1px solid red;
-// }
+@deeporange : #ff7043;
 
 *{
   box-sizing: border-box;
+}
+
+body{
+  // background: url('../img/brushed_alu_dark.png');
+  // background: url('../img/3198.jpg') no-repeat center fixed;
+  // background-size: cover;
 }
 
 nav{
@@ -23,6 +27,37 @@ nav{
   border: 1px solid @bluegrey;
   border-radius: 100%;
 }
+
+#skill{
+  .material-icons{
+    color: @deeporange;
+  }
+}
+
+/**************
+Scrollspy CSS *
+ **************/
+
+ .table-of-contents a {
+   color: #fff;
+   font-weight: normal;
+ }
+
+ .table-of-contents a.active {
+    font-weight: 900;
+    border-left: none;
+    border-bottom: 2px solid @deeporange;
+   }
+
+   .table-of-contents a:hover{
+     color: #fff;
+     border-left: none;
+     background-color: @bluegrey;
+   }
+
+/***********
+Slider CSS *
+ ***********/
 
 // indicateur slider
 .slider .indicators .indicator-item.active {
