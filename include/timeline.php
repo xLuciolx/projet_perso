@@ -1,4 +1,4 @@
-<div class="col s12 m6 l6">
+<div class="col s12 m6 offset-m1 l6 offset-l1">
   <ul class="timeline">
     <li>
       <div class="direction-l">
