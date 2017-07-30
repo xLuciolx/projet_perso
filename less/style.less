@@ -14,6 +14,9 @@ body{
 }
 
 nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   ul{
     li{
       width: 20%;
@@ -22,17 +25,65 @@ nav{
   }
 }
 
-#avatar{
-  padding: 0.5em;
-  border: 1px solid @bluegrey;
-  border-radius: 100%;
+.container{
+  padding: .5em;
 }
+
+/************************
+ * CSS section à propos *
+ ************************/
+
+#about{
+  #avatar{
+    padding: 0.5em;
+    border: 1px solid @bluegrey;
+    border-radius: 100%;
+  }
+
+  p{
+    padding-left: .75em;
+  }
+}
+
+/***************************
+ * CSS section compétences *
+ ***************************/
 
 #skill{
   .material-icons{
     color: @deeporange;
   }
+
+  .card{
+    border: 1px solid #000;
+    border-radius: 5%;
+  }
 }
+
+/***********************
+ * CSS section contact *
+ ***********************/
+
+#contact{
+  input::placeholder, textarea::placeholder {
+    color: red;
+    text-align: right;
+  }
+
+  #social {
+    a{
+      color: @bluegrey;
+      padding-right: 3em;
+    }
+
+    a:hover{
+      color: @deeporange;
+      transition: all .5s linear;
+    }
+  }
+}
+
+
 
 /**************
 Scrollspy CSS *
@@ -62,6 +113,22 @@ Slider CSS *
 // indicateur slider
 .slider .indicators .indicator-item.active {
   background-color: @bluegrey;
+}
+
+.slides img{
+  position: relative;
+}
+
+// Légende pour les photos du slider
+.slides p{
+  margin: 0;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  padding: .5em 0;
+  background-color: fadeout(#000, 35%);;
+  color: #fff;
 }
 
 /***********************
