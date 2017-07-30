@@ -1,16 +1,25 @@
 <?php
 
 /************************************************************
- * Fonction affichant un icone                              *
- * @param  [string] $icon [nom de l'icon, e.g :'star']      *
+ * Fonction affichant une icone                             *
+ * @param  [string] $icon [nom de l'icone, e.g :'star']     *
  * @param  [integer] $nb   [nombre d'icone à afficher]      *
- * @return [html code]       [code html affichant un icone] *
+ * @param  [string] $option [option, e.g: 'right']          *
+ * @return [html code]      [code html affichant une icone] *
  ************************************************************/
 
 
-  function setIcon($icon, $nb){
-    for ($i=0; $i < $nb ; $i++) {
-      echo '<i class="material-icons">' . $icon . '</i>';
+  function setIcon($icon, $nb, $option=null){
+    if (is_null($option)) {
+      for ($i=0; $i < $nb ; $i++) {
+        echo '<i class="material-icons">' . $icon . '</i>';
+      }
     }
+    else {
+      for ($i=0; $i < $nb ; $i++) {
+        echo '<i class="material-icons ' . $option . '">' . $icon . '</i>';
+      }
+    }
+
   }
  ?>
