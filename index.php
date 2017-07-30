@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <!-- CSS -->
@@ -54,7 +56,8 @@
         </ul>
     </nav>
 
-    <div class="fixed-action-btn horizontal click-to-toggle show-on-small hide-on-med-and-up" >
+    <!-- navigation small screen -->
+    <div class="fixed-action-btn click-to-toggle show-on-small hide-on-med-and-up" >
       <a class="btn-floating btn-large blue-grey lighten-1 waves-effect waves-light"><?= setIcon('menu',1); ?></a>
       <ul>
         <li><a href="#about" class="btn-floating deep-orange lighten-1"><?= setIcon('person_outline',1); ?></a></li>
@@ -65,6 +68,7 @@
       </ul>
     </div>
     <div class="divider hide-on-med-and-up show-on-small"></div>
+
     <main>
 
       <section id="about" class="scrollspy">
@@ -82,7 +86,7 @@
               <img src="img/avatar.jpg" alt="avatar" class="responsive-img circle center-block" id="avatar">
             </div>
             <div class="col s12 m8 pull-m4 l8 pull-l4">
-              <p>
+              <p class="righ-align">
                 Développeur / Intégrateur web curieux, autonome et rigoureux, j'aime les applications simples, rapides et efficaces.
                 Un sens de l'écoute et du service, une expertise technique en constante progression grâce à une formation continue. Motivé par le besoin de toujours mieux faire et appuyé par des bases acquises au cours de mon parcours, je prend plaisir à relever de nouveaux challenges.
               </p>
@@ -115,7 +119,7 @@
                       <h3 class="center-align">
                         Front-end
                       </h3>
-                      <span class="fa-stack fa-5x center-block">
+                      <span class="fa-stack fa-4x center-block">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-television fa-stack-1x"></i>
                       </span>
@@ -173,7 +177,7 @@
                           </h3>
                         </div>
                         <div class="col s12 m12 l12 ">
-                          <span class="fa-stack fa-5x center-block">
+                          <span class="fa-stack fa-4x center-block">
                             <i class="fa fa-circle-thin fa-stack-2x"></i>
                             <i class="fa fa-server fa-stack-1x"></i>
                           </span>
@@ -229,7 +233,7 @@
                       <h3 class="center-align">
                         Divers
                       </h3>
-                      <span class="fa-stack fa-5x center-block">
+                      <span class="fa-stack fa-4x center-block">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-gears fa-stack-1x"></i>
                       </span>
@@ -297,10 +301,10 @@
                 <img class="activator" src="img/banane.png" alt="site Banana-shop">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Banana-Shop<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Banana-Shop<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Banana-shop<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Banana-shop<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.</p>
                 <p><a href="#">Lien</a></p>
               </div>
@@ -312,10 +316,10 @@
                 <img class="activator" src="img/facebook.png" alt="site facebook">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Facebook<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Facebook<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Facebook<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Facebook<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Reproduction de l'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.</p>
                 <p><a href="#">Lien</a></p>
               </div>
@@ -327,10 +331,10 @@
                 <img class="activator" src="img/scotland.png" alt="site Visit Scotland">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Visit Scotland<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Visit Scotland<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Visit Scotland<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Visit Scotland<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.</p>
                 <p><a href="#">Lien</a></p>
               </div>
@@ -344,10 +348,10 @@
                 <img class="activator" src="img/cats.png" alt="site OhMyCats">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">OhMyCats<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">OhMyCats<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">OhMyCats<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">OhMyCats<?= setIcon('close', 1, 'right'); ?></span>
                 <p>
                   Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.
                 </p>
@@ -361,10 +365,10 @@
                 <img class="activator" src="img/cars.png" alt="site Old Schools Cars">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Old Schools Cars<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Old Schools Cars<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Old Schools Cars<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Old Schools Cars<?= setIcon('close', 1, 'right'); ?></span>
                 <p>
                   Page de sélection d'un véhicule, utilisaton de flexbox et de javascript.
                 </p>
@@ -378,10 +382,10 @@
                 <img class="activator" src="img/biovillefranche.png" alt="site OhMyCats">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Bio Villefranche<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Bio Villefranche<?= setIcon('more_vert', 1, 'right'); ?></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Bio Villefranche<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Bio Villefranche<?= setIcon('close', 1, 'right'); ?></span>
                 <p>
                   Site de vente d'une épicerie bio. Génération dynamique du contenu grâce à PHP et SQL, vérification de formulaires et partie administration du site.
                 </p>
@@ -400,44 +404,38 @@
                 <ul class="slides">
                   <li>
                     <img src="img/biovillefranche.png" alt="accueil">
-                    <!-- <div class="caption left-align">
-                      <h4>Accueil</h3>
-                    </div>
-                  </li> -->
+                    <p class="center-align">
+                      Accueil
+                    </p>
                   <li>
                     <img src="img/inscription.png">
-                    <!-- <div class="caption left-align">
-                      <h3>Left Aligned Caption</h3>
-                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div> -->
+                    <p class="center-align">
+                      Inscription
+                    </p>
                   </li>
                   <li>
-                    <img src="img/produits.png"> <!-- random image -->
-                    <!-- <div class="caption right-align">
-                      <h3>Right Aligned Caption</h3>
-                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div> -->
+                    <img src="img/produits.png">
+                    <p class="center-align">
+                      Produits
+                    </p>
                   </li>
                   <li>
                     <img src="img/panier.png">
-                    <!-- <div class="caption center-align">
-                      <h3>This is our big Tagline!</h3>
-                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div> -->
+                    <p class="center-align">
+                      Panier
+                    </p>
                   </li>
                   <li>
                     <img src="img/admin.png">
-                    <!-- <div class="caption center-align">
-                      <h3>This is our big Tagline!</h3>
-                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div> -->
+                    <p class="center-align">
+                      Administration
+                    </p>
                   </li>
                   <li>
                     <img src="img/stat.png">
-                    <!-- <div class="caption center-align">
-                      <h3>This is our big Tagline!</h3>
-                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    </div> -->
+                    <p class="center-align">
+                      Statistiques
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -468,7 +466,7 @@
             <?php
               include 'include/timeline.php';
              ?>
-          <div class="col s8 offset-s2 m4 l4">
+          <div class="col s10 offset-s1 m4 l4">
             <div class="card">
             <div class="card-content">
               <span class="card-title center-align">Diplomes</span>
@@ -490,7 +488,7 @@
                   </p>
                 </li>
               </ul>
-                <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a><span> Télecharger la version pdf</span>
+                <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a><span> Télecharger le CV version pdf</span>
             </div>
             </div>
           </div>
@@ -500,12 +498,90 @@
       <div class="divider"></div>
 
       <section id="contact" class="scrollspy">
-        Contact
+        <div class="row">
+          <div class="col s12 m12 l12 center-align">
+            <h2>
+              Contact
+            </h2>
+            <p class="grey-text darken-1">
+              N'hésitez pas.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <form action="traitement.php" method="post" id="contact">
+              <div class="input-field">
+                <?= setIcon('person', 1, 'prefix'); ?>
+                <label for="name">Nom:</label>
+                <input type="text" name="name" id="nom">
+              </div>
+              <div class="input-field">
+                <?= setIcon('contact_mail', 1, 'prefix'); ?>
+                <label for="mail">Email:</label>
+                <input type="email" name="mail" id="mail">
+              </div>
+              <div class="input-field">
+                <?= setIcon('edit', 1, 'prefix'); ?>
+                <label for="msg">Message:</label>
+                <textarea name="msg" class="materialize-textarea" id="message"></textarea>
+              </div>
+              <div class="row">
+                <div class="col s5 offset-s1 m5 offset-m1 l5 offset-l1">
+                  <button class="btn waves-effect waves-light deep-orange lighten-1" type="submit" name="btnSub" value="OK">Envoyer
+                    <?= setIcon('send', 1, 'right'); ?>
+                  </button>
+                </div>
+                <div class="col s5 offset-s1 m5 offset-m1 l5 offset-l1">
+                  <button class="btn waves-effect waves-light deep-orange lighten-1" type="button" id="erase">Effacer
+                    <?= setIcon('clear', 1, 'right'); ?>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col s12 m4 offset-m2 l4 offset-l2 ">
+            <div id="phone">
+              <h4>
+                Téléphone:
+              </h4>
+              <p>
+                Fixe: 01 23 45 67 89
+              </p>
+              <p>
+                Portable : 06 12 34 56 78
+              </p>
+            </div>
+            <div id="address">
+              <h4>
+                Adresse:
+              </h4>
+              <p>
+                11 Allée le Coteau 69380 Lozanne
+              </p>
+            </div>
+            <div id="social">
+              <h4>
+                Réseaux sociaux:
+              </h4>
+              <a href="https://github.com/xLuciolx" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+              <a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a>
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>
 
-    <footer>
+    <footer class="blue-grey lighten-1">
+      <div class="row">
+        <div class="col s12 m12 l12 center-align">
+          <p class="white-text">
+            Luciol prod. &copy; 2017
+          </p>
+          <a href="#!">Mentions légales</a>
+        </div>
+      </div>
     </footer>
   </div>
 
@@ -519,5 +595,6 @@
   <!-- Javascript Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script src="js/components.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
