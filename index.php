@@ -510,7 +510,7 @@
         </div>
         <div class="row">
           <div class="col s12 m6 l6">
-            <form action="traitement.php" method="post" id="contact">
+            <form id="contactForm">
               <div class="input-field">
                 <?= setIcon('person', 1, 'prefix'); ?>
                 <label for="name">Nom:</label>
@@ -528,7 +528,7 @@
               </div>
               <div class="row">
                 <div class="col s5 offset-s1 m5 offset-m1 l5 offset-l1">
-                  <button class="btn waves-effect waves-light deep-orange lighten-1" type="submit" name="btnSub" value="OK">Envoyer
+                  <button class="btn waves-effect waves-light deep-orange lighten-1" type="submit">Envoyer
                     <?= setIcon('send', 1, 'right'); ?>
                   </button>
                 </div>
@@ -539,6 +539,7 @@
                 </div>
               </div>
             </form>
+            <div id="messageAjax"></div>
           </div>
           <div class="col s12 m4 offset-m2 l4 offset-l2 ">
             <div id="phone">
@@ -594,6 +595,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Javascript Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <!-- scripts js -->
   <script src="js/components.js" charset="utf-8"></script>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
