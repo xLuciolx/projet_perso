@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$form.find('input, textarea').removeClass('invalid');
 		$form.find('input, textarea').removeAttr('placeholder');
 	}
-	
+
 	// fonction vérifiant le formulaire
 	function checkInput($input){
 		// on recupere le type d'input
@@ -67,11 +67,25 @@ $(document).ready(function(){
 
 	$('#contact').on('submit', function(e){
 		e.preventDefault();
-		if(checkInput($('#nom')) && checkInput($('#mail')) && checkInput($('#message'))){
-			alert('Valide');
+		if(checkInput($('#nom'))){
+			// alert('Valide');
 		}
 		else {
-			alert('Invalide');
+			// alert('Invalide');
+		}
+
+		if(checkInput($('#mail')) && checkInput($('#message'))){
+			// alert('Valide');
+		}
+		else {
+			// alert('Invalide');
+		}
+
+		if(checkInput($('#message'))){
+			// alert('Valide');
+		}
+		else {
+			// alert('Invalide');
 		}
 		// var formSubmit = $(this).serialize();
 		// $(this).serializeArray();
