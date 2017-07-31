@@ -2,7 +2,6 @@
 /*jslint browser: true*/ /*global  $*/
 $(document).ready(function(){
 
-
 	// fonction réinitialisant le formulaire
 	function resetForm($form) {
 		$form.find('input, textarea').val('');
@@ -64,29 +63,20 @@ $(document).ready(function(){
 	// $('#message').on('focusout', function(){
 	// 	checkInput($('#message'));
 	// });
-
 	$('#contact').on('submit', function(e){
 		e.preventDefault();
-		if(checkInput($('#nom'))){
-			// alert('Valide');
-		}
-		else {
-			// alert('Invalide');
+		var verif = 0;
+
+		if(checkInput($('#nom'))) verif++;
+
+		if(checkInput($('#mail')) && checkInput($('#message'))) verif++;
+
+		if(checkInput($('#message'))) verif++;
+
+		if(verif == 3){
+			alert('valide');
 		}
 
-		if(checkInput($('#mail')) && checkInput($('#message'))){
-			// alert('Valide');
-		}
-		else {
-			// alert('Invalide');
-		}
-
-		if(checkInput($('#message'))){
-			// alert('Valide');
-		}
-		else {
-			// alert('Invalide');
-		}
 		// var formSubmit = $(this).serialize();
 		// $(this).serializeArray();
 	});
