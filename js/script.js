@@ -16,6 +16,7 @@ $(document).ready(function(){
 		// si email
 		if (type == 'email') {
 			var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+			// si regex non validée
 			if (! regex.test($input.val())){
 				$input.val('');
 				$input.addClass('invalid');
@@ -30,6 +31,7 @@ $(document).ready(function(){
 		}
 
 		else {
+			// si le champs est vide
 			if ($input.val() == ''){
 				$input.addClass('invalid');
 				$input.attr('placeholder', 'Veuillez compléter ce champs');
@@ -50,21 +52,10 @@ $(document).ready(function(){
 		resetForm($('#contact'));
 	});
 
-	// Contôles du formulaire
-	// $('#nom').on('focusout', function(){
-	// 	checkInput($('#nom'));
-	// });
-	//
-	// $('#mail').on('focusout', function(){
-	// 	checkInput($('#mail'));
-	// });
-	//
-	//
-	// $('#message').on('focusout', function(){
-	// 	checkInput($('#message'));
-	// });
-	$('#contact').on('submit', function(e){
+	$('#contactForm').on('submit', function(e){
 		e.preventDefault();
+		// var formData = $(this).serialize();
+		// alert(formData);
 		var verif = 0;
 
 		if(checkInput($('#nom'))) verif++;
@@ -74,10 +65,22 @@ $(document).ready(function(){
 		if(checkInput($('#message'))) verif++;
 
 		if(verif == 3){
-			alert('valide');
+			// si le formulaire est valide, on fait la requête ajax
+			$.ajax({
+				url: 'traitement.php',
+				method: 'POST',
+				dataType: 'json',
+				data: $(this).serialize(),
+
+				error: function(xhr, msg){
+					$('#messageAjax').html('<p class="center-align red white-text">Erreur: ' + xhr.status + ' ' + msg + '</p>');
+				},
+
+				success: function(data){
+					alert(data);
+				}
+			});
 		}
 
-		// var formSubmit = $(this).serialize();
-		// $(this).serializeArray();
 	});
 });
