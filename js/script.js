@@ -67,7 +67,7 @@ $(document).ready(function(){
 		if(verif == 3){
 			// si le formulaire est valide, on fait la requête ajax
 			$.ajax({
-				url: 'traitement.ph',
+				url: 'traitement.php',
 				method: 'POST',
 				dataType: 'json',
 				data: $(this).serialize(),
