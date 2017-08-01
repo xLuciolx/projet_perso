@@ -3,7 +3,9 @@
 
 $(document).ready(function(){
 	// initialisation scrollSPy
-	$('.scrollspy').scrollSpy();
+	$('.scrollspy').scrollSpy({
+		scrollOffset: 300
+	});
 
 	// initialisation modal pour le slider
 	$('.modal').modal({
