@@ -1,5 +1,6 @@
 <?php
   include 'include/tool.php';
+  include 'include/connexion.php';
  ?>
 
 <!DOCTYPE html>
@@ -306,7 +307,7 @@
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Banana-shop<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.</p>
-                <p><a href="#">Lien</a></p>
+                <p><a href="sites/banana-shop/index.html" target="_blank">Lien</a></p>
               </div>
             </div>
           </div>
@@ -321,7 +322,7 @@
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Facebook<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Reproduction de l'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.</p>
-                <p><a href="#">Lien</a></p>
+                <p><a href="sites/Facebook/index.html" target="_blank">Lien</a></p>
               </div>
             </div>
           </div>
@@ -336,7 +337,7 @@
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Visit Scotland<?= setIcon('close', 1, 'right'); ?></span>
                 <p>Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.</p>
-                <p><a href="#">Lien</a></p>
+                <p><a href="sites/scotland/index.html" target="_blank">Lien</a></p>
               </div>
             </div>
           </div>
@@ -355,7 +356,7 @@
                 <p>
                   Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.
                 </p>
-                <p><a href="#">Lien</a></p>
+                <p><a href="sites/Chat/index.html" target="_blank">Lien</a></p>
               </div>
             </div>
           </div>
@@ -372,7 +373,7 @@
                 <p>
                   Page de sélection d'un véhicule, utilisaton de flexbox et de javascript.
                 </p>
-                <p><a href="#">Lien</a></p>
+                <p><a href="sites/Cars/index/index.html" target="_blank">Lien</a></p>
               </div>
             </div>
           </div>
@@ -390,7 +391,7 @@
                   Site de vente d'une épicerie bio. Génération dynamique du contenu grâce à PHP et SQL, vérification de formulaires et partie administration du site.
                 </p>
                 <p>
-                  <p><a href="#" class="left">Lien</a></p>
+                  <p><a href="sites/biovillefranche/index.php" target="_blank" class="left">Lien</a></p>
                 <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1 modal-trigger right hide-on-small-only" href="#modal"><?= setIcon('add',1); ?></a>
                 </p>
               </div>
@@ -458,7 +459,7 @@
               CV
             </h2>
             <p class="grey-text darken-1">
-              Mon parcours professionnel et ma formation
+              Mon parcours professionnel et ma formation.
             </p>
           </div>
         </div>
@@ -488,7 +489,7 @@
                   </p>
                 </li>
               </ul>
-                <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a><span> Télecharger le CV version pdf</span>
+                <span> Télecharger le CV version pdf </span><a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a>
             </div>
             </div>
           </div>
@@ -517,7 +518,7 @@
                 <input type="text" name="name" id="nom">
               </div>
               <div class="input-field">
-                <?= setIcon('contact_mail', 1, 'prefix'); ?>
+                <?= setIcon('mail', 1, 'prefix'); ?>
                 <label for="mail">Email:</label>
                 <input type="email" name="mail" id="mail">
               </div>
@@ -580,7 +581,17 @@
           <p class="white-text">
             Luciol prod. &copy; 2017
           </p>
-          <a href="#!">Mentions légales</a>
+          <a class="modal-trigger" href="#modal2">Mentions légales</a>
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <?php
+                include 'include/mentions.php';
+               ?>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
