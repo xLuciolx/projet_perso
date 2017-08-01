@@ -1,5 +1,7 @@
 // out: ../css/style.css, compress: true
 
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 @bluegrey : #78909c;
 @deeporange : #ff7043;
 
@@ -8,9 +10,7 @@
 }
 
 body{
-  // background: url('../img/brushed_alu_dark.png');
-  // background: url('../img/5099.jpg') no-repeat center fixed;
-  // background-size: cover;
+  font-family: 'Rubik', sans-serif;
 }
 
 nav{
@@ -65,8 +65,22 @@ nav{
  ***********************/
 
 #contact{
+
+  #messageAjax{
+    display: none;
+  }
+
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+  .input-field input[type=text]:focus , .input-field input[type=email]:focus, .input-field textarea:focus{
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+  }
+
   input::placeholder, textarea::placeholder {
-    color: red;
+    color: #ff0000;
     text-align: right;
   }
 
@@ -84,6 +98,16 @@ nav{
 }
 
 
+/***************
+ * CSS footer  *
+ ***************/
+
+footer{
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+}
 
 /**************
 Scrollspy CSS *
