@@ -67,17 +67,41 @@ $(document).ready(function(){
 		if(verif == 3){
 			// si le formulaire est valide, on fait la requête ajax
 			$.ajax({
-				url: 'traitement.php',
+				url: 'traitement.ph',
 				method: 'POST',
 				dataType: 'json',
 				data: $(this).serialize(),
 
 				error: function(xhr, msg){
-					$('#messageAjax').html('<p class="center-align red white-text">Erreur: ' + xhr.status + ' ' + msg + '</p>');
+					$('#messageAjax').show();
+					$('#messageAjax').addClass('card-panel red lighten-1');
+					$('#messageAjax').append('<p class="center-align white-text">Erreur: ' + xhr.status + ' ' + msg + '</p>');
+					setTimeout(function(){
+						$('#messageAjax').hide();
+						$('#messageAjax').html('');
+					}, 3000);
 				},
 
 				success: function(data){
-					alert(data);
+					if(data == 0){
+						// si le mail n'est pas envoyé
+						$('#messageAjax').show();
+						$('#messageAjax').addClass('card-panel red lighten-1');
+						$('#messageAjax').append('<p class="center-align white-text">Un problème est survenu lors de l\'envoi du message</p>');
+						setTimeout(function(){
+							$('#messageAjax').hide();
+							$('#messageAjax').html('');
+						}, 3000);
+					}
+
+					else {
+						// Mail envoyé, message de succes
+						$('#contactForm').slideUp();
+						$('#messageAjax').addClass('card-panel teal lighten-1');
+						$('#messageAjax').append('<p class="center-align white-text">Votre message a bien été envoyé</p>');
+						$('#messageAjax').slideDown(1000);
+
+					}
 				}
 			});
 		}
