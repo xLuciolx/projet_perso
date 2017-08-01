@@ -2,31 +2,85 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
+@darkblue : #607d8b;
 @bluegrey : #78909c;
 @deeporange : #ff7043;
+@brown : #efebe9;
 
 *{
   box-sizing: border-box;
 }
 
 body{
+  background-color: @brown;
   font-family: 'Rubik', sans-serif;
+  font-size: 16px;
 }
+
+.container{
+  padding: .5em 0;
+}
+
+.divider{
+  background-color: @deeporange;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+h4{
+  font-size: 1.75em;
+}
+
+h2 + p{
+  font-style: italic;
+}
+/**************
+ * CSS header *
+ **************/
+
+header{
+  background-color: @darkblue;
+  color: #fff;
+  padding-bottom: 2em;
+
+  p{
+    font-size: 1.5em;
+  }
+
+  h1{
+    font-size: 3em;
+  }
+
+}
+
+/***********
+ * CSS nav *
+ ***********/
 
 nav{
   position: sticky;
   top: 0;
   z-index: 1000;
+  text-transform: uppercase;
+
+  .container, .table-of-contents{
+    padding: 0;
+  }
+
   ul{
+
     li{
       width: 20%;
       text-align: center;
+
+      a{
+        font-size: 1.15em;
+      }
+
     }
   }
-}
-
-.container{
-  padding: .5em;
 }
 
 /************************
@@ -59,6 +113,11 @@ nav{
     border-radius: 5%;
   }
 }
+
+/**********
+ * CSS CV *
+ **********/
+
 
 /***********************
  * CSS section contact *
@@ -103,6 +162,11 @@ nav{
  ***************/
 
 footer{
+
+  p{
+    margin-bottom: 0;
+  }
+
   a{
     text-decoration: none;
     color: #fff;
@@ -151,7 +215,7 @@ Slider CSS *
   right: 0;
   left: 0;
   padding: .5em 0;
-  background-color: fadeout(#000, 35%);;
+  background-color: fadeout(#000, 35%);
   color: #fff;
 }
 
