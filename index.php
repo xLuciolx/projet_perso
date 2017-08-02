@@ -74,7 +74,6 @@
         <li><a href="#contact" class="btn-floating deep-orange lighten-1"><?= setIcon('mail_outline',1); ?></a></li>
       </ul>
     </div>
-    <div class="divider hide-on-med-and-up show-on-small"></div>
 
     <main>
 
@@ -507,7 +506,7 @@
                     </p>
                   </li>
                 </ul>
-                  <span> Télécharger le CV version pdf: </span><a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="img/avatar.jpg" download><?= setIcon('attach_file', 1); ?></a>
+                  <span> Télécharger le CV version pdf: </span><a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="docs/CV_DW.pdf" download><?= setIcon('attach_file', 1); ?></a>
               </div>
               </div>
             </div>
@@ -530,7 +529,6 @@
           <div class="row">
             <div class="col s12 m6 l6">
               <form id="contactForm">
-              <!-- <form id="contactForm" action="traitement.php" method="post"> -->
                 <div class="input-field">
                   <?= setIcon('person', 1, 'prefix'); ?>
                   <label for="name">Nom:</label>
@@ -587,7 +585,7 @@
                 </h4>
                 <a href="https://github.com/xLuciolx" target="_blank"><i class="fa fa-github fa-3x"></i></a>
                 <a href="https://stackoverflow.com/users/8404641/luciol?tab=profile" target="_blank"><i class="fa fa-stack-overflow fa-3x"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/loïc-gallay-7a2844148" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
               </div>
             </div>
           </div>
