@@ -1,26 +1,25 @@
 <?php
   include 'include/connexion.php';
   require 'include/phpmailer/PHPMailerAutoload.php';
-
+  error_reporting(0);
   // Nettoyage
   $safe = array_map('strip_tags', $_POST);
 
-  // requete insertion contact
-  $rqContact = "INSERT INTO contacts(nomContact, mailContact, msgContact, dateContact)
-                      VALUES (:nomContact, :mailContact, :msgContact, NOW())";
+  $answer = array();
 
-  // préparation
-  $stmtContact = $dbh->prepare($rqContact);
+  // Vérification des données
+  if(!filter_var($safe['mail'], FILTER_VALIDATE_EMAIL)){
+    $answer['err'] = 'Adresse mail invalide';
+    return json_encode($answer);
+  }
 
-  // parametres
-  $params = array(
-                  ':nomContact' => $safe['name'],
-                  ':mailContact' => $safe['mail'],
-                  ':msgContact' => $safe['msg']
-                  );
+  if(!strlen(trim($safe['name'])) > 0 || !strlen(trim($safe['msg'])) == 0) {
+    $answer['err'] = 'Les champs ne peuvent être vides';
+    return json_encode($answer);
+  }
 
   // execution
-  if($stmtContact->execute($params)){
+  // if($stmtContact->execute($params)){
     //si succes envoi du mail
     $mail = new PHPMailer;
     $mail->CharSet = 'UTF-8';
@@ -54,13 +53,31 @@
                   </html>';
 
     if(!$mail->send()){
-      echo 0;
+      $answer['err'] = 'Erreur lors de l\'envoi du mail.';
+      echo json_encode($answer);
     }
     else {
-      echo 1;
+      // requete insertion contact
+      $rqContact = "INSERT INTO contacts(nomContact, mailContact, msgContact, dateContact)
+                          VALUES (:nomContact, :mailContact, :msgContact, NOW())";
+
+      // préparation
+      $stmtContact = $dbh->prepare($rqContact);
+
+      // parametres
+      $params = array(
+                      ':nomContact' => $safe['name'],
+                      ':mailContact' => $safe['mail'],
+                      ':msgContact' => $safe['msg']
+                      );
+
+      $stmtContact->execute($params);
+
+      $answer['ok'] = 'Votre message a bien été envoyé.';
+      echo json_encode($answer);
     }
 
-  }
+
 
 
  ?>
