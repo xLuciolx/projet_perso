@@ -4,17 +4,18 @@
 $(document).ready(function(){
 	// initialisation scrollSPy
 	$('.scrollspy').scrollSpy({
-		scrollOffset: 300
+		scrollOffset: 400
 	});
 
 	// initialisation modal pour le slider
 	$('.modal').modal({
 		dismissible: true,
-		opacity: .5,
+		opacity: .5
 	});
 
 	// initialisation slider + option
 	$('.slider').slider({
 		height: 415,
+		interval: 10000
 	});
 });
