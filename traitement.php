@@ -1,21 +1,34 @@
 <?php
   include 'include/connexion.php';
   require 'include/phpmailer/PHPMailerAutoload.php';
+
   error_reporting(0);
+
   // Nettoyage
   $safe = array_map('strip_tags', $_POST);
 
   $answer = array();
 
-  // Vérification des données
+  //Vérification des données
   if(!filter_var($safe['mail'], FILTER_VALIDATE_EMAIL)){
     $answer['err'] = 'Adresse mail invalide';
-    return json_encode($answer);
+    echo json_encode($answer);
+    return;
   }
 
-  if(!strlen(trim($safe['name'])) > 0 || !strlen(trim($safe['msg'])) == 0) {
+  $name = str_replace(' ','',$safe['name']);
+  $msg = str_replace(' ','',$safe['msg']);
+
+  if(!strlen($name) > 0) {
     $answer['err'] = 'Les champs ne peuvent être vides';
-    return json_encode($answer);
+    echo json_encode($answer);
+    return;
+  }
+
+  if (!strlen($msg) > 0) {
+    $answer['err'] = 'Les champs ne peuvent être vides';
+    echo json_encode($answer);
+    return;
   }
 
   // execution
@@ -55,6 +68,7 @@
     if(!$mail->send()){
       $answer['err'] = 'Erreur lors de l\'envoi du mail.';
       echo json_encode($answer);
+      return;
     }
     else {
       // requete insertion contact
