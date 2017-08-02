@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	// initialisation slider + option
 	$('.slider').slider({
-		height: 415,
+		height: 525,
 		interval: 10000
 	});
 });
