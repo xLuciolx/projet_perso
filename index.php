@@ -165,6 +165,15 @@
                                 setIcon('star_border', 1);
                               ?>
                             </li>
+                            <li>
+                              <p>
+                                jQuery
+                              </p>
+                              <?php
+                                setIcon('star',4);
+                                setIcon('star_border', 1);
+                               ?>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -272,12 +281,12 @@
                           </li>
                           <li>
                             <p>
-                              Langues: Anglais (courant + professionnel), Allemand (lu)
+                              Architectures AJAX, MVC
                             </p>
                           </li>
                           <li>
                             <p>
-                              Certifié 0 Opquast <i class="material-icons">sentiment_very_satisfied</i>
+                              Langues: Anglais (courant + professionnel), Allemand (lu)
                             </p>
                           </li>
                         </ul>
@@ -520,7 +529,8 @@
           </div>
           <div class="row">
             <div class="col s12 m6 l6">
-              <form id="contactForm" action="traitement.php" method="post">
+              <form id="contactForm">
+              <!-- <form id="contactForm" action="traitement.php" method="post"> -->
                 <div class="input-field">
                   <?= setIcon('person', 1, 'prefix'); ?>
                   <label for="name">Nom:</label>
@@ -576,6 +586,7 @@
                   Réseaux sociaux:
                 </h4>
                 <a href="https://github.com/xLuciolx" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+                <a href="https://stackoverflow.com/users/8404641/luciol?tab=profile" target="_blank"><i class="fa fa-stack-overflow fa-3x"></i></a>
                 <a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a>
               </div>
             </div>
