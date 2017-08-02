@@ -54,8 +54,7 @@ $(document).ready(function(){
 
 	$('#contactForm').on('submit', function(e){
 		e.preventDefault();
-		// var formData = $(this).serialize();
-		// alert(formData);
+
 		var verif = 0;
 
 		if(checkInput($('#nom'))) verif++;
@@ -79,26 +78,26 @@ $(document).ready(function(){
 					setTimeout(function(){
 						$('#messageAjax').hide();
 						$('#messageAjax').html('');
-					}, 3000);
+					}, 5000);
 				},
 
 				success: function(data){
-					if(data == 0){
+					if(data.err){
 						// si le mail n'est pas envoyé
 						$('#messageAjax').show();
 						$('#messageAjax').addClass('card-panel red lighten-1');
-						$('#messageAjax').append('<p class="center-align white-text">Un problème est survenu lors de l\'envoi du message</p>');
+						$('#messageAjax').append('<p class="center-align white-text">' + data.err + '</p>');
 						setTimeout(function(){
 							$('#messageAjax').hide();
 							$('#messageAjax').html('');
-						}, 3000);
+						}, 5000);
 					}
 
 					else {
 						// Mail envoyé, message de succes
 						$('#contactForm').slideUp();
 						$('#messageAjax').addClass('card-panel teal lighten-1');
-						$('#messageAjax').append('<p class="center-align white-text">Votre message a bien été envoyé</p>');
+						$('#messageAjax').append('<p class="center-align white-text">' + data.ok + '</p>');
 						$('#messageAjax').slideDown(1000);
 
 					}
