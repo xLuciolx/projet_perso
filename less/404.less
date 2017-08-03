@@ -1,0 +1,95 @@
+// out: ../css/404.css, compress: true
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@brown : #efebe9;
+@D:280px;
+@R:(@D/2);
+@B:(@R/8);
+@O: 0.6;
+@A: 2s;
+
+html,
+body{
+  height: 100%;
+}
+
+body{
+  background-color: @brown;
+  overflow: hidden;
+}
+
+a{
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.75em;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+
+.four-o-four{
+  // color: rgb(220,220,226);
+  position:absolute;
+  top:50%; left:50%;
+  margin-left:-@R;
+  margin-top:-@R;
+  width:@D;
+  height:@D;
+  text-align:center;
+  font-family: 'Rubik', sans-serif;
+  font-size:@R/4;
+  line-height:@D;
+  -webkit-font-smoothing: antialiased;
+}
+
+.four-o-four:after,
+.four-o-four:before{
+  content:"";
+  border-radius:100%;
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  transform-origin:center center;
+}
+
+.four-o-four:after{
+  box-shadow: inset 0 @B 0 rgba(250, 250, 0, @O),
+              inset @B 0 0 rgba(250, 200, 0, @O),
+              inset 0 -@B 0 rgba(250, 150, 0, @O),
+              inset -@B 0 0 rgba(250, 100, 0, @O);
+  animation: rotate1 @A -0.5s linear infinite;
+}
+
+.four-o-four:before{
+  box-shadow: inset 0 @B 0 rgba(0, 250, 250, @O),
+              inset @B 0 0 rgba(0, 200, 200, @O),
+              inset 0 -@B 0 rgba(0, 150, 200, @O),
+              inset -@B 0 0 rgba(0, 200, 250, @O);
+  animation: rotate2 @A -0.5s linear infinite;
+}
+
+@keyframes rotate1{
+  0%{
+    transform:rotateZ(0deg) scaleX(1) scaleY(1);
+  }
+  50%{
+    transform:rotateZ(180deg) scaleX(0.82) scaleY(0.95);
+  }
+  100%{
+    transform:rotateZ(360deg) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes rotate2{
+  0%{
+    transform:rotateZ(0deg) scaleX(1) scaleY(1);
+  }
+  50%{
+    transform:rotateZ(-180deg) scaleX(0.95) scaleY(0.85);
+  }
+  100%{
+    transform:rotateZ(-360deg) scaleX(1) scaleY(1);
+  }
+}
