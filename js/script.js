@@ -36,7 +36,6 @@ $(document).ready(function(){
 				$input.addClass('invalid');
 				$input.attr('placeholder', 'Veuillez compléter ce champs');
 				return false;
-
 			}
 			else{
 				$input.removeAttr('placeholder');
@@ -45,6 +44,25 @@ $(document).ready(function(){
 			}
 		}
 
+	}
+
+	// fonction pour les messages d'erreur
+	function errorMsg($elt, message){
+		$('#messageAjax').show();
+		$('#messageAjax').addClass('card-panel red lighten-1');
+		$('#messageAjax').append('<p class="center-align white-text">Erreur: ' + message + '</p>');
+		setTimeout(function(){
+			$('#messageAjax').hide();
+			$('#messageAjax').html('');
+		}, 5000);
+	}
+
+	// fonction message de confirmation
+	function successMsg($elt, message){
+		$('#contactForm').slideUp();
+		$('#messageAjax').addClass('card-panel teal lighten-1');
+		$('#messageAjax').append('<p class="center-align white-text">' + message + '</p>');
+		$('#messageAjax').slideDown(1000);
 	}
 
 	// au clique sur le bouton on efface les champs
@@ -72,38 +90,24 @@ $(document).ready(function(){
 				data: $(this).serialize(),
 
 				error: function(xhr, msg){
-					$('#messageAjax').show();
-					$('#messageAjax').addClass('card-panel red lighten-1');
-					$('#messageAjax').append('<p class="center-align white-text">Erreur: ' + xhr.status + ' ' + msg + '</p>');
-					setTimeout(function(){
-						$('#messageAjax').hide();
-						$('#messageAjax').html('');
-					}, 5000);
+					var errorAjax = xhr.status + ' ' + msg;
+					errorMsg($('#messageAjax'), errorAjax);
 				},
 
 				success: function(data){
 					if(data.err){
 						// si le mail n'est pas envoyé
-						$('#messageAjax').show();
-						$('#messageAjax').addClass('card-panel red lighten-1');
-						$('#messageAjax').append('<p class="center-align white-text">' + data.err + '</p>');
-						setTimeout(function(){
-							$('#messageAjax').hide();
-							$('#messageAjax').html('');
-						}, 5000);
+						errorMsg($('#messageAjax'), data.err);
 					}
 
 					else {
 						// Mail envoyé, message de succes
-						$('#contactForm').slideUp();
-						$('#messageAjax').addClass('card-panel teal lighten-1');
-						$('#messageAjax').append('<p class="center-align white-text">' + data.ok + '</p>');
-						$('#messageAjax').slideDown(1000);
-
+						successMsg($('#messageAjax'), data.ok);
 					}
 				}
 			});
 		}
 
 	});
+
 });
