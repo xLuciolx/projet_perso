@@ -275,7 +275,7 @@
                           </li>
                           <li>
                             <p>
-                              Framework PHP: silex, W
+                              Framework PHP: silex
                             </p>
                           </li>
                           <li>
