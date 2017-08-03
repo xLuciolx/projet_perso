@@ -275,7 +275,7 @@
                           </li>
                           <li>
                             <p>
-                              Framework PHP: silex
+                              Framework PHP: silex, W
                             </p>
                           </li>
                           <li>
@@ -313,86 +313,73 @@
           </div>
           <div class="row">
             <div class="col s10 offset-s1 m4 l4">
-              <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/banane.png" alt="site Banana-shop">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Banana-Shop<?= setIcon('more_vert', 1, 'right'); ?></span>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Banana-shop<?= setIcon('close', 1, 'right'); ?></span>
-                  <p>Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.</p>
-                  <p><a href="sites/banana-shop/index.html" target="_blank">Lien</a></p>
-                </div>
-              </div>
+              <?php
+              $desc = 'Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.';
+              $banane = array(
+                          'title' => 'Banana-shop',
+                          'src' => 'img/banane.png',
+                          'alt' => 'site Banana-shop',
+                          'description' => $desc,
+                          'href' => 'sites/banana-shop/index.html'
+                        );
+              createCard($banane);
+              ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
-              <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/facebook.png" alt="site facebook">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Facebook<?= setIcon('more_vert', 1, 'right'); ?></span>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Facebook<?= setIcon('close', 1, 'right'); ?></span>
-                  <p>Reproduction de l'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.</p>
-                  <p><a href="sites/Facebook/index.html" target="_blank">Lien</a></p>
-                </div>
-              </div>
+              <?php
+                $desc = 'Reproduction de l\'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.';
+                $facebook = array(
+                                  'title' => 'Facebook',
+                                  'src' => 'img/facebook.png',
+                                  'alt' => 'site Facebook',
+                                  'description' => $desc,
+                                  'href' => 'sites/Facebook/index.html'
+                                  );
+                createCard($facebook);
+
+               ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
-              <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/scotland.png" alt="site Visit Scotland">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Visit Scotland<?= setIcon('more_vert', 1, 'right'); ?></span>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Visit Scotland<?= setIcon('close', 1, 'right'); ?></span>
-                  <p>Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.</p>
-                  <p><a href="sites/scotland/index.html" target="_blank">Lien</a></p>
-                </div>
-              </div>
+              <?php
+                $desc = 'Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.';
+                $scotland = array(
+                                  'title' => 'Visit Scotland',
+                                  'src' => 'img/scotland.png',
+                                  'alt' => 'site Visit Scotland',
+                                  'description' => $desc,
+                                  'href' => 'sites/scotland/index.html'
+                                  );
+                createCard($scotland);
+               ?>
             </div>
           </div>
           <div class="row">
             <div class="col s10 offset-s1 m4 l4">
-              <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/cats.png" alt="site OhMyCats">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">OhMyCats<?= setIcon('more_vert', 1, 'right'); ?></span>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">OhMyCats<?= setIcon('close', 1, 'right'); ?></span>
-                  <p>
-                    Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.
-                  </p>
-                  <p><a href="sites/Chat/index.html" target="_blank">Lien</a></p>
-                </div>
-              </div>
+              <?php
+                $desc = 'Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.';
+                $cats = array(
+                              'title' => 'OhMyCats',
+                              'src' => 'img/cats.png',
+                              'alt' => 'site OhMyCats',
+                              'description' => $desc,
+                              'href' => 'sites/Chat/index.html'
+                              );
+                createCard($cats);
+               ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
               <!-- merci Laura pour la maquette :) -->
-              <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/cars.png" alt="site Old Schools Cars">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Old Schools Cars<?= setIcon('more_vert', 1, 'right'); ?></span>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Old Schools Cars<?= setIcon('close', 1, 'right'); ?></span>
-                  <p>
-                    Page de sélection d'un véhicule, utilisaton de flexbox et de javascript.
-                  </p>
-                  <p><a href="sites/Cars/index/index.html" target="_blank">Lien</a></p>
-                </div>
-              </div>
+              <?php
+                $desc = 'Page de sélection d\'un véhicule, utilisaton de flexbox et de javascript.';
+                $cats = array(
+                              'title' => 'Old Schools Cars',
+                              'src' => 'img/cars.png',
+                              'alt' => 'site Old Schools Cars',
+                              'description' => $desc,
+                              'href' => 'sites/Cars/index/index.html'
+                              );
+                createCard($cats);
+               ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
               <div class="card hoverable">
@@ -460,7 +447,7 @@
 
               </div>
               <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-bluegrey-lighten-1 btn-flat ">Fermer</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-bluegrey-lighten-1 btn-flat">Fermer</a>
               </div>
              </div>
           </div>
@@ -609,7 +596,7 @@
                  ?>
               </div>
               <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-bluegrey-lighten-1 btn-flat">Fermer</a>
               </div>
             </div>
           </div>
