@@ -10,26 +10,26 @@
   $answer = array();
 
   //Vérification des données
-  if(!filter_var($safe['mail'], FILTER_VALIDATE_EMAIL)){
-    $answer['err'] = 'Adresse mail invalide';
-    echo json_encode($answer);
-    return;
+  if (!filter_var($safe['mail'], FILTER_VALIDATE_EMAIL)) {
+      $answer['err'] = 'Adresse mail invalide';
+      echo json_encode($answer);
+      return;
   }
 
   // On enleve les espaces
-  $name = str_replace(' ','',$safe['name']);
-  $msg = str_replace(' ','',$safe['msg']);
+  $name = str_replace(' ', '', $safe['name']);
+  $msg = str_replace(' ', '', $safe['msg']);
 
-  if(!strlen($name) > 0) {
-    $answer['err'] = 'Les champs ne peuvent être vides';
-    echo json_encode($answer);
-    return;
+  if (!strlen($name) > 0) {
+      $answer['err'] = 'Les champs ne peuvent être vides';
+      echo json_encode($answer);
+      return;
   }
 
   if (!strlen($msg) > 0) {
-    $answer['err'] = 'Les champs ne peuvent être vides';
-    echo json_encode($answer);
-    return;
+      $answer['err'] = 'Les champs ne peuvent être vides';
+      echo json_encode($answer);
+      return;
   }
 
   //  envoi du mail
@@ -63,13 +63,12 @@
                 </body>
                 </html>';
 
-  if(!$mail->send()){
-    $answer['err'] = 'Erreur lors de l\'envoi du mail.';
-    echo json_encode($answer);
-    return;
-  }
-  else {
-    // requete insertion contact
+  if (!$mail->send()) {
+      $answer['err'] = 'Erreur lors de l\'envoi du mail.';
+      echo json_encode($answer);
+      return;
+  } else {
+      // requete insertion contact
     $rqContact = "INSERT INTO contacts(nomContact, mailContact, msgContact, dateContact)
                          VALUES (:nomContact, :mailContact, :msgContact, NOW())";
 
@@ -88,9 +87,4 @@
       // message de confirmation
       $answer['ok'] = 'Votre message a bien été envoyé.';
       echo json_encode($answer);
-    }
-
-
-
-
- ?>
+  }
