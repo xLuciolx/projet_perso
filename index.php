@@ -20,8 +20,8 @@
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="css/timeline.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/timeline.css">
 </head>
 <body>
 
@@ -221,7 +221,8 @@
                               PHP orienté objet
                             </p>
                             <?php
-                              setIcon('star_border', 5);
+                              setIcon('star', 4);
+                              setIcon('star_border', 1);
                              ?>
                           </li>
                           <li>
@@ -275,7 +276,7 @@
                           </li>
                           <li>
                             <p>
-                              Framework PHP: silex, W
+                              Framework PHP: Silex
                             </p>
                           </li>
                           <li>
@@ -316,71 +317,44 @@
               <?php
               $desc = 'Magasin de vente de bananes. Utilisation de flexbox, slider et onglet réalisés avec javascript.';
               $banane = array(
-                          'title' => 'Banana-shop',
-                          'src' => 'img/banane.png',
-                          'alt' => 'site Banana-shop',
+                          'title'       => 'Banana-shop',
+                          'src'         => 'img/banane.png',
+                          'alt'         => 'site Banana-shop',
                           'description' => $desc,
-                          'href' => 'sites/banana-shop/index.html'
+                          'href'        => 'sites/banana-shop/index.html'
                         );
               createCard($banane);
               ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
               <?php
-                $desc = 'Reproduction de l\'interface de Facebook. Utilisation de flexbox, version responsive par le biais de media query.';
-                $facebook = array(
-                                  'title' => 'Facebook',
-                                  'src' => 'img/facebook.png',
-                                  'alt' => 'site Facebook',
-                                  'description' => $desc,
-                                  'href' => 'sites/Facebook/index.html'
-                                  );
-                createCard($facebook);
-
-               ?>
-            </div>
-            <div class="col s10 offset-s1 m4 l4">
-              <?php
                 $desc = 'Site de réservation pour des séjours en Ecosse. Slideshow réalisé en javascript, utilisation de jQuery UI et du plugin datepicker pour la gestion des dates.';
                 $scotland = array(
-                                  'title' => 'Visit Scotland',
-                                  'src' => 'img/scotland.png',
-                                  'alt' => 'site Visit Scotland',
+                                  'title'       => 'Visit Scotland',
+                                  'src'         => 'img/scotland.png',
+                                  'alt'         => 'site Visit Scotland',
                                   'description' => $desc,
-                                  'href' => 'sites/scotland/index.html'
+                                  'href'        => 'sites/scotland/index.html'
                                   );
                 createCard($scotland);
-               ?>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s10 offset-s1 m4 l4">
-              <?php
-                $desc = 'Evaluation finale front-end. Utilisation de bootstrap, vérification du formulaire avec jQuery.';
-                $cats = array(
-                              'title' => 'OhMyCats',
-                              'src' => 'img/cats.png',
-                              'alt' => 'site OhMyCats',
-                              'description' => $desc,
-                              'href' => 'sites/Chat/index.html'
-                              );
-                createCard($cats);
                ?>
             </div>
             <div class="col s10 offset-s1 m4 l4">
               <!-- merci Laura pour la maquette :) -->
               <?php
                 $desc = 'Page de sélection d\'un véhicule, utilisaton de flexbox et de javascript.';
-                $cats = array(
-                              'title' => 'Old Schools Cars',
-                              'src' => 'img/cars.png',
-                              'alt' => 'site Old Schools Cars',
+                $cars = array(
+                              'title'       => 'Old Schools Cars',
+                              'src'         => 'img/cars.png',
+                              'alt'         => 'site Old Schools Cars',
                               'description' => $desc,
-                              'href' => 'sites/Cars/index/index.html'
+                              'href'        => 'sites/Cars/index/index.html'
                               );
-                createCard($cats);
+                createCard($cars);
                ?>
             </div>
+          </div>
+          <div class="row">
             <div class="col s10 offset-s1 m4 l4">
               <div class="card hoverable">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -395,7 +369,7 @@
                     Site de vente d'une épicerie bio. Génération dynamique du contenu grâce à PHP et SQL, vérification de formulaires et partie administration du site.
                   </p>
                   <p>
-                    <p><a href="sites/biovillefranche/index.php" target="_blank" class="left">Lien</a></p>
+                    <p><a href="#" target="_blank" class="left">Lien</a></p>
                     <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1 modal-trigger right hide-on-small-only" href="#modal"><?= setIcon('add',1); ?></a>
                   </p>
                 </div>
@@ -450,6 +424,34 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-bluegrey-lighten-1 btn-flat">Fermer</a>
               </div>
              </div>
+             <div class="col s10 offset-s1 m4 l4" id="technews">
+               <!-- merci Laura pour la maquette :) -->
+               <?php
+                 $desc = 'Site de news technologiques réalisé avec le framework PHP Silex. Utilisation de twig pour le moteur de template.';
+                 $news = array(
+                               'title'       => 'Technews',
+                               'src'         => 'img/technews_home.png',
+                               'alt'         => 'site Technews',
+                               'description' => $desc,
+                               'href'        => '#'
+                               );
+                 createCard($news);
+                ?>
+             </div>
+             <div class="col s10 offset-s1 m4 l4" id="books">
+               <!-- merci Laura pour la maquette :) -->
+               <?php
+                 $desc = 'Projet de fin de formation. Utilisation de Silex, twig, idiorm, bootstrap et plusieurs api Google (maps, charts,...)';
+                 $book = array(
+                               'title'       => 'Livres Voyageurs',
+                               'src'         => 'img/book_home.png',
+                               'alt'         => 'site Livres Voyageurs',
+                               'description' => $desc,
+                               'href'        => '#'
+                               );
+                 createCard($book);
+                ?>
+             </div>
           </div>
 
         </section>
@@ -476,6 +478,14 @@
               <div class="card-content">
                 <span class="card-title center-align">Diplomes</span>
                 <ul>
+                  <li>
+                    <p>
+                      Certificats techniques d'intégration et de dévéloppement web
+                    </p>
+                    <p>
+                      Webforce3
+                    </p>
+                  </li>
                   <li>
                     <p>
                       Licence de Biologie des Organismes
