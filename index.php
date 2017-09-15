@@ -96,7 +96,7 @@
               <div class="col s12 m8 pull-m4 l8 pull-l4">
                 <p class="righ-align">
                   Développeur / Intégrateur web curieux, autonome et rigoureux, j'aime les applications simples, rapides et efficaces.
-                  Un sens de l'écoute et du service, une expertise technique en constante progression grâce à une formation continue. Motivé par le besoin de toujours mieux faire et appuyé par des bases acquises au cours de mon parcours, je prend plaisir à relever de nouveaux challenges.
+                  Un sens de l'écoute et du service, une expertise technique en constante progression grâce à une formation continue. Motivé par le besoin de toujours mieux faire et appuyé par des bases acquises au cours de mon parcours, je prends plaisir à relever de nouveaux challenges.
                 </p>
               </div>
             </div>
@@ -358,7 +358,7 @@
             <div class="col s10 offset-s1 m4 l4">
               <div class="card hoverable">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="img/biovillefranche.png" alt="site OhMyCats">
+                  <img class="activator" src="img/biovillefranche.png" alt="site BioVillefranche">
                 </div>
                 <div class="card-content">
                   <span class="card-title activator grey-text text-darken-4">Bio Villefranche<?= setIcon('more_vert', 1, 'right'); ?></span>
@@ -369,7 +369,7 @@
                     Site de vente d'une épicerie bio. Génération dynamique du contenu grâce à PHP et SQL, vérification de formulaires et partie administration du site.
                   </p>
                   <p>
-                    <p><a href="#" target="_blank" class="left">Lien</a></p>
+                    <p><a href="http://biovillefranche.loicgallay.com" target="_blank" class="left">Lien</a></p>
                     <a class="btn-floating fab waves-effect waves-light deep-orange lighten-1 modal-trigger right hide-on-small-only" href="#modal"><?= setIcon('add',1); ?></a>
                   </p>
                 </div>
@@ -387,31 +387,31 @@
                         Accueil
                       </p>
                     <li>
-                      <img src="img/inscription.png">
+                      <img src="img/inscription.png" alt="inscription">
                       <p class="center-align">
                         Inscription
                       </p>
                     </li>
                     <li>
-                      <img src="img/produits.png">
+                      <img src="img/produits.png" alt="produits">
                       <p class="center-align">
                         Produits
                       </p>
                     </li>
                     <li>
-                      <img src="img/panier.png">
+                      <img src="img/panier.png" alt="panier">
                       <p class="center-align">
                         Panier
                       </p>
                     </li>
                     <li>
-                      <img src="img/admin.png">
+                      <img src="img/admin.png" alt="administration">
                       <p class="center-align">
                         Administration
                       </p>
                     </li>
                     <li>
-                      <img src="img/stat.png">
+                      <img src="img/stat.png" alt="statiqtiques">
                       <p class="center-align">
                         Statistiques
                       </p>
@@ -425,7 +425,6 @@
               </div>
              </div>
              <div class="col s10 offset-s1 m4 l4" id="technews">
-               <!-- merci Laura pour la maquette :) -->
                <?php
                  $desc = 'Site de news technologiques réalisé avec le framework PHP Silex. Utilisation de twig pour le moteur de template.';
                  $news = array(
@@ -433,13 +432,12 @@
                                'src'         => 'img/technews_home.png',
                                'alt'         => 'site Technews',
                                'description' => $desc,
-                               'href'        => '#'
+                               'href'        => 'http://silex.loicgallay.com'
                                );
                  createCard($news);
                 ?>
              </div>
              <div class="col s10 offset-s1 m4 l4" id="books">
-               <!-- merci Laura pour la maquette :) -->
                <?php
                  $desc = 'Projet de fin de formation. Utilisation de Silex, twig, idiorm, bootstrap et plusieurs api Google (maps, charts,...)';
                  $book = array(
@@ -447,7 +445,7 @@
                                'src'         => 'img/book_home.png',
                                'alt'         => 'site Livres Voyageurs',
                                'description' => $desc,
-                               'href'        => '#'
+                               'href'        => 'http://livres.loicgallay.com'
                                );
                  createCard($book);
                 ?>
@@ -480,7 +478,7 @@
                 <ul>
                   <li>
                     <p>
-                      Certificats techniques d'intégration et de dévéloppement web
+                      Certificats techniques d'intégration et de développement web
                     </p>
                     <p>
                       Webforce3
@@ -503,7 +501,7 @@
                     </p>
                   </li>
                 </ul>
-                  <span> Télécharger le CV version pdf: </span><a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="docs/CV_DW.pdf" download><?= setIcon('attach_file', 1); ?></a>
+                  <span> Télécharger le CV version pdf: </span><a class="btn-floating fab waves-effect waves-light deep-orange lighten-1" href="docs/CV.pdf" download><?= setIcon('attach_file', 1); ?></a>
               </div>
               </div>
             </div>
@@ -596,7 +594,7 @@
         <div class="row">
           <div class="col s12 m12 l12 center-align">
             <p class="white-text">
-              Luciol prod. &copy; 2017
+              Loïc Gallay &copy; 2017
             </p>
             <a class="modal-trigger" href="#modal2">Mentions légales</a>
             <div id="modal2" class="modal">
