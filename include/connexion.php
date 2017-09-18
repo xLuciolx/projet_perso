@@ -8,7 +8,7 @@
 //Connection localhost
 $dbh = new PDO('mysql:host=localhost;dbname=projet_perso;charset=utf8',
                'root',
-               '');
+               '160178');
 // debug
 $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 // mode de recupération
