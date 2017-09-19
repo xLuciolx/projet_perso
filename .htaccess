@@ -1,2 +1,3 @@
 Options -Indexes
 ErrorDocument 404 http://localhost/public/projet_perso/404.php
+# ErrorDocument 404 http://www.loicgallay.com/404.php
